@@ -1,0 +1,27 @@
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.exe.config
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.exe
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.pdb
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.xml
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name_Rectifier.Form1.resources
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name_Rectifier.Resources.resources
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.vbproj.GenerateResource.Cache
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.exe
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.xml
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.pdb
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Eval3.dll
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\RichText.dll
+E:\My Works\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.vbprojResolveAssemblyReference.cache
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.exe.config
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.exe
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.xml
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.pdb
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.exe
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.pdb
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Name Rectifier.xml
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\Eval3.dll
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\bin\Debug\RichText.dll
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.vbprojResolveAssemblyReference.cache
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name_Rectifier.Form1.resources
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name_Rectifier.Resources.resources
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name Rectifier.vbproj.GenerateResource.Cache
+D:\My Creations\Softwares\Name Rectifier\VB .Net\Name Rectifier\obj\Debug\Name_Rectifier.AutoStepMode.resources
