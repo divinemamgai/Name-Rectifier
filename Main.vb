@@ -3,7 +3,7 @@ Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 
-Public Class Form1
+Public Class Main
 
     Dim FilePaths() As String = Nothing,
         FileFolderPaths() As String = Nothing,
@@ -12,6 +12,7 @@ Public Class Form1
         FileTypes() As String = Nothing,
         NumberOfFiles As Integer = 0,
         PrecedeWithZero As Boolean = True,
+        FileTypeCase As Integer = 0,
         MathFunctionRegex As Regex = New Regex("\?([^\?]*)\?"),
         StringFunctionRegex As Regex = New Regex("\|([^\|]*)\|"),
         StringExpressionRegexs() As Regex = {New Regex("F\/(\d+)"),
@@ -147,6 +148,18 @@ Public Class Form1
         StringArray(0) = Char.ToLower(StringArray(0))
         Return New String(StringArray)
     End Function
+
+    Private Sub FileTypeCaseButtonClick(sender As Object, e As EventArgs) Handles FileTypeCaseButton.Click
+        FileTypeCase = (FileTypeCase + 1) Mod 3
+        Select Case FileTypeCase
+            Case 0
+                FileTypeCaseButton.Text = "File Type Letter-Case - Off"
+            Case 1
+                FileTypeCaseButton.Text = "File Type Letter-Case - Lower"
+            Case 2
+                FileTypeCaseButton.Text = "File Type Letter-Case - Upper"
+        End Select
+    End Sub
 
     Private Sub ProcessRectificationDoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ProcessRectification.DoWork
         Dim FileNameFormat As String = FileNameFormatTextBox.Text,
@@ -293,6 +306,12 @@ Public Class Form1
                 End While
                 ReDim Preserve ProcessedFileNames(Count)
                 ProcessedFileNames(Count) = FileName
+                Select Case FileTypeCase
+                    Case 1
+                        FileTypes(Count) = FileTypes(Count).ToLower()
+                    Case 2
+                        FileTypes(Count) = FileTypes(Count).ToUpper()
+                End Select
             End If
         Next
     End Sub
@@ -384,14 +403,26 @@ Public Class Form1
             If FilesDialog.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
                 NumberOfFilesLabel.Text = "Number Of Files : " + CStr(FilesDialog.FileNames.Length)
                 NumberOfFilesLabel.Show()
+                ExcludeFileTypesLabel.Show()
+                ExcludeFileTypesRichTextBox.Show()
                 PrecedeWithZeroButton.Show()
+                FileTypeCaseButton.Show()
+                FileNameFormatLabel.Show()
+                FileNameFormatTextBox.Show()
+                ProcessRectificationButton.Show()
                 EnableDisableFileRectifier(True)
                 FilePaths = FilesDialog.FileNames
                 NumberOfFiles = FilePaths.Length
                 ProcessFilePaths()
             Else
                 NumberOfFilesLabel.Hide()
+                ExcludeFileTypesLabel.Hide()
+                ExcludeFileTypesRichTextBox.Hide()
                 PrecedeWithZeroButton.Hide()
+                FileTypeCaseButton.Hide()
+                FileNameFormatLabel.Hide()
+                FileNameFormatTextBox.Hide()
+                ProcessRectificationButton.Hide()
                 EnableDisableFileRectifier(False)
             End If
         Catch ex As Exception
@@ -437,13 +468,17 @@ Public Class Form1
     End Function
 
     Private Sub ProcessRectificationButtonClick(sender As Object, e As EventArgs) Handles ProcessRectificationButton.Click
-        LogGroupBox.Show()
-        LogGroupBox.BringToFront()
-        Log.Text = "Starting Rectification Of Files..."
-        If ProcessExclusionFlag = True Then
-            AddToLog("Processing Exclusion Types...")
+        If NumberOfFiles <> 0 And FileNameFormatTextBox.TextLength <> 0 Then
+            LogGroupBox.Show()
+            LogGroupBox.BringToFront()
+            Log.Text = "Starting Rectification Of Files..."
+            If ProcessExclusionFlag = True Then
+                AddToLog("Processing Exclusion Types...")
+            End If
+            ProcessExclusion.RunWorkerAsync()
+        Else
+            MessageBox.Show("File name format cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
-        ProcessExclusion.RunWorkerAsync()
     End Sub
 
     Private Sub LogChange(sender As Object, e As EventArgs) Handles Log.TextChanged

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,8 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.FileTypeCaseButton = New System.Windows.Forms.Button()
         Me.AutoStepModeButton = New System.Windows.Forms.Button()
         Me.PrecedeWithZeroButton = New System.Windows.Forms.Button()
         Me.NumberOfFilesLabel = New System.Windows.Forms.Label()
@@ -54,6 +55,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.FileTypeCaseButton)
         Me.GroupBox1.Controls.Add(Me.AutoStepModeButton)
         Me.GroupBox1.Controls.Add(Me.PrecedeWithZeroButton)
         Me.GroupBox1.Controls.Add(Me.NumberOfFilesLabel)
@@ -71,25 +73,42 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "File Rectifier"
         '
+        'FileTypeCaseButton
+        '
+        Me.FileTypeCaseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FileTypeCaseButton.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FileTypeCaseButton.Location = New System.Drawing.Point(70, 96)
+        Me.FileTypeCaseButton.Name = "FileTypeCaseButton"
+        Me.FileTypeCaseButton.Size = New System.Drawing.Size(177, 21)
+        Me.FileTypeCaseButton.TabIndex = 16
+        Me.FileTypeCaseButton.Text = "File Type Letter-Case - Off"
+        Me.ToolTip.SetToolTip(Me.FileTypeCaseButton, "Letter-Case of the file type of the file will be converted to either Upper or Low" &
+        "er or won't change at all.")
+        Me.FileTypeCaseButton.UseVisualStyleBackColor = True
+        Me.FileTypeCaseButton.Visible = False
+        '
         'AutoStepModeButton
         '
         Me.AutoStepModeButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AutoStepModeButton.Location = New System.Drawing.Point(368, 154)
+        Me.AutoStepModeButton.Enabled = False
+        Me.AutoStepModeButton.Location = New System.Drawing.Point(223, 153)
         Me.AutoStepModeButton.Name = "AutoStepModeButton"
         Me.AutoStepModeButton.Size = New System.Drawing.Size(127, 27)
         Me.AutoStepModeButton.TabIndex = 15
         Me.AutoStepModeButton.Text = "Auto Step Mode"
         Me.AutoStepModeButton.UseVisualStyleBackColor = True
+        Me.AutoStepModeButton.Visible = False
         '
         'PrecedeWithZeroButton
         '
         Me.PrecedeWithZeroButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PrecedeWithZeroButton.Location = New System.Drawing.Point(276, 21)
+        Me.PrecedeWithZeroButton.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrecedeWithZeroButton.Location = New System.Drawing.Point(115, 69)
         Me.PrecedeWithZeroButton.Name = "PrecedeWithZeroButton"
-        Me.PrecedeWithZeroButton.Size = New System.Drawing.Size(132, 27)
+        Me.PrecedeWithZeroButton.Size = New System.Drawing.Size(132, 21)
         Me.PrecedeWithZeroButton.TabIndex = 14
         Me.PrecedeWithZeroButton.Text = "Precede With 0 - On"
-        Me.ToolTip.SetToolTip(Me.PrecedeWithZeroButton, "Precedes with zero when calculating any expression if the digits are less then th" & _
+        Me.ToolTip.SetToolTip(Me.PrecedeWithZeroButton, "Precedes with zero when calculating any expression if the digits are less then th" &
         "e maximum number of digits expected.")
         Me.PrecedeWithZeroButton.UseVisualStyleBackColor = True
         Me.PrecedeWithZeroButton.Visible = False
@@ -110,9 +129,9 @@ Partial Class Form1
         Me.ExcludeFileTypesRichTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ExcludeFileTypesRichTextBox.Location = New System.Drawing.Point(7, 54)
+        Me.ExcludeFileTypesRichTextBox.Location = New System.Drawing.Point(253, 54)
         Me.ExcludeFileTypesRichTextBox.Name = "ExcludeFileTypesRichTextBox"
-        Me.ExcludeFileTypesRichTextBox.Size = New System.Drawing.Size(488, 63)
+        Me.ExcludeFileTypesRichTextBox.Size = New System.Drawing.Size(242, 63)
         Me.ExcludeFileTypesRichTextBox.TabIndex = 12
         Me.ExcludeFileTypesRichTextBox.Text = ""
         '
@@ -121,12 +140,11 @@ Partial Class Form1
         Me.ExcludeFileTypesLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ExcludeFileTypesLabel.AutoSize = True
         Me.ExcludeFileTypesLabel.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExcludeFileTypesLabel.Location = New System.Drawing.Point(8, 75)
+        Me.ExcludeFileTypesLabel.Location = New System.Drawing.Point(8, 51)
         Me.ExcludeFileTypesLabel.Name = "ExcludeFileTypesLabel"
-        Me.ExcludeFileTypesLabel.Size = New System.Drawing.Size(464, 15)
+        Me.ExcludeFileTypesLabel.Size = New System.Drawing.Size(245, 15)
         Me.ExcludeFileTypesLabel.TabIndex = 12
-        Me.ExcludeFileTypesLabel.Text = "Exclude File Types : [Format : srt,flv {This will exclude files having types - sr" & _
-    "t and flv.}]"
+        Me.ExcludeFileTypesLabel.Text = "Exclude File Types [ Separated By Comma ] :"
         '
         'FileNameFormatTextBox
         '
@@ -134,7 +152,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FileNameFormatTextBox.Location = New System.Drawing.Point(120, 125)
         Me.FileNameFormatTextBox.Name = "FileNameFormatTextBox"
-        Me.FileNameFormatTextBox.Size = New System.Drawing.Size(242, 23)
+        Me.FileNameFormatTextBox.Size = New System.Drawing.Size(375, 23)
         Me.FileNameFormatTextBox.TabIndex = 9
         '
         'FileNameFormatLabel
@@ -151,9 +169,9 @@ Partial Class Form1
         'SelectFilesButton
         '
         Me.SelectFilesButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SelectFilesButton.Location = New System.Drawing.Point(414, 21)
+        Me.SelectFilesButton.Location = New System.Drawing.Point(394, 21)
         Me.SelectFilesButton.Name = "SelectFilesButton"
-        Me.SelectFilesButton.Size = New System.Drawing.Size(81, 27)
+        Me.SelectFilesButton.Size = New System.Drawing.Size(101, 27)
         Me.SelectFilesButton.TabIndex = 2
         Me.SelectFilesButton.Text = "Select Files"
         Me.SelectFilesButton.UseVisualStyleBackColor = True
@@ -161,9 +179,9 @@ Partial Class Form1
         'ProcessRectificationButton
         '
         Me.ProcessRectificationButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProcessRectificationButton.Location = New System.Drawing.Point(368, 123)
+        Me.ProcessRectificationButton.Location = New System.Drawing.Point(354, 153)
         Me.ProcessRectificationButton.Name = "ProcessRectificationButton"
-        Me.ProcessRectificationButton.Size = New System.Drawing.Size(127, 27)
+        Me.ProcessRectificationButton.Size = New System.Drawing.Size(141, 27)
         Me.ProcessRectificationButton.TabIndex = 0
         Me.ProcessRectificationButton.Text = "Process Rectification"
         Me.ProcessRectificationButton.UseVisualStyleBackColor = True
@@ -253,15 +271,17 @@ Partial Class Form1
         'ProcessExclusion
         '
         '
-        'Form1
+        'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(526, 439)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LogGroupBox)
-        Me.Name = "Form1"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Main"
         Me.Text = "Name Rectifier"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -291,5 +311,5 @@ Partial Class Form1
     Friend WithEvents DuplicateChecker As System.ComponentModel.BackgroundWorker
     Friend WithEvents ProcessExclusion As System.ComponentModel.BackgroundWorker
     Friend WithEvents AutoStepModeButton As System.Windows.Forms.Button
-
+    Friend WithEvents FileTypeCaseButton As Button
 End Class
