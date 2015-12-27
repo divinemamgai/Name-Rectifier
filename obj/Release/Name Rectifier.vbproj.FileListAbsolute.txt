@@ -1,0 +1,14 @@
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\Name Rectifier.exe.config
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\Name Rectifier.exe
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\Name Rectifier.pdb
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\Name Rectifier.xml
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\Eval3.dll
+E:\My Creations\Softwares\Name Rectifier\VB.Net\bin\Release\RichText.dll
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name Rectifier.vbprojResolveAssemblyReference.cache
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name_Rectifier.AutoStepMode.resources
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name_Rectifier.Main.resources
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name_Rectifier.Resources.resources
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name Rectifier.vbproj.GenerateResource.Cache
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name Rectifier.exe
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name Rectifier.xml
+E:\My Creations\Softwares\Name Rectifier\VB.Net\obj\Release\Name Rectifier.pdb
