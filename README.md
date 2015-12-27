@@ -4,6 +4,7 @@ Bulk file name rectification with ease!
 You can very easily manipulate the names of multiple files at once.
 The program uses File Name Format, according to which all the files will be renamed, it can include following Expressions/Functions : 
 [List is also available in the program itself.]
+
 Mathematical Expressions ::
 
           ?N? : Current file/folder count/number.
