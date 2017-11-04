@@ -75,7 +75,6 @@ Partial Class Main
         '
         'FileTypeCaseButton
         '
-        Me.FileTypeCaseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FileTypeCaseButton.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FileTypeCaseButton.Location = New System.Drawing.Point(70, 96)
         Me.FileTypeCaseButton.Name = "FileTypeCaseButton"
@@ -85,7 +84,6 @@ Partial Class Main
         Me.ToolTip.SetToolTip(Me.FileTypeCaseButton, "Letter-Case of the file type of the file will be converted to either Upper or Low" &
         "er or won't change at all.")
         Me.FileTypeCaseButton.UseVisualStyleBackColor = True
-        Me.FileTypeCaseButton.Visible = False
         '
         'AutoStepModeButton
         '
@@ -97,11 +95,9 @@ Partial Class Main
         Me.AutoStepModeButton.TabIndex = 15
         Me.AutoStepModeButton.Text = "Auto Step Mode"
         Me.AutoStepModeButton.UseVisualStyleBackColor = True
-        Me.AutoStepModeButton.Visible = False
         '
         'PrecedeWithZeroButton
         '
-        Me.PrecedeWithZeroButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PrecedeWithZeroButton.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PrecedeWithZeroButton.Location = New System.Drawing.Point(115, 69)
         Me.PrecedeWithZeroButton.Name = "PrecedeWithZeroButton"
@@ -111,7 +107,6 @@ Partial Class Main
         Me.ToolTip.SetToolTip(Me.PrecedeWithZeroButton, "Precedes with zero when calculating any expression if the digits are less then th" &
         "e maximum number of digits expected.")
         Me.PrecedeWithZeroButton.UseVisualStyleBackColor = True
-        Me.PrecedeWithZeroButton.Visible = False
         '
         'NumberOfFilesLabel
         '

@@ -33,21 +33,14 @@ Public Class Main
         ForceRename As Boolean = False
 
     Public Sub EnableDisableFileRectifier(ByVal Enable As Boolean)
-        If Enable = True Then
-            ExcludeFileTypesLabel.Enabled = True
-            ExcludeFileTypesRichTextBox.Enabled = True
-            FileNameFormatLabel.Enabled = True
-            FileNameFormatTextBox.Enabled = True
-            ProcessRectificationButton.Enabled = True
-            AutoStepModeButton.Enabled = True
-        Else
-            ExcludeFileTypesLabel.Enabled = False
-            ExcludeFileTypesRichTextBox.Enabled = False
-            FileNameFormatLabel.Enabled = False
-            FileNameFormatTextBox.Enabled = False
-            ProcessRectificationButton.Enabled = False
-            AutoStepModeButton.Enabled = False
-        End If
+        ExcludeFileTypesLabel.Enabled = Enable
+        ExcludeFileTypesRichTextBox.Enabled = Enable
+        FileNameFormatLabel.Enabled = Enable
+        FileNameFormatTextBox.Enabled = Enable
+        PrecedeWithZeroButton.Enabled = Enable
+        FileTypeCaseButton.Enabled = Enable
+        ProcessRectificationButton.Enabled = Enable
+        AutoStepModeButton.Enabled = Enable
     End Sub
 
     Public Sub ProcessFilePaths()
@@ -403,26 +396,12 @@ Public Class Main
             If FilesDialog.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
                 NumberOfFilesLabel.Text = "Number Of Files : " + CStr(FilesDialog.FileNames.Length)
                 NumberOfFilesLabel.Show()
-                ExcludeFileTypesLabel.Show()
-                ExcludeFileTypesRichTextBox.Show()
-                PrecedeWithZeroButton.Show()
-                FileTypeCaseButton.Show()
-                FileNameFormatLabel.Show()
-                FileNameFormatTextBox.Show()
-                ProcessRectificationButton.Show()
                 EnableDisableFileRectifier(True)
                 FilePaths = FilesDialog.FileNames
                 NumberOfFiles = FilePaths.Length
                 ProcessFilePaths()
             Else
                 NumberOfFilesLabel.Hide()
-                ExcludeFileTypesLabel.Hide()
-                ExcludeFileTypesRichTextBox.Hide()
-                PrecedeWithZeroButton.Hide()
-                FileTypeCaseButton.Hide()
-                FileNameFormatLabel.Hide()
-                FileNameFormatTextBox.Hide()
-                ProcessRectificationButton.Hide()
                 EnableDisableFileRectifier(False)
             End If
         Catch ex As Exception
